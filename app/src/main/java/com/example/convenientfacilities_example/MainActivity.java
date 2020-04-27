@@ -10,7 +10,10 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import android.os.Bundle;
 import android.view.MenuItem;
 
+import com.example.convenientfacilities_example.ui.home.FoodFragment;
 import com.example.convenientfacilities_example.ui.home.HomeFragment;
+import com.example.convenientfacilities_example.ui.home.PublicartFragment;
+import com.example.convenientfacilities_example.ui.home.StorytellingFragment;
 import com.google.android.material.navigation.NavigationView;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -58,6 +61,18 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             case R.id.nav_bus:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                         new BusFragment()).commit();
+                break;
+            case R.id.nav_food:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                        new FoodFragment()).commit();
+                break;
+            case R.id.nav_storytelling:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                        new StorytellingFragment()).commit();
+                break;
+            case R.id.nav_publicart:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                        new PublicartFragment()).commit();
                 break;
         }
 
